@@ -1,0 +1,4 @@
+/deployment
+/Backend/node_modules
+/Backend/build
+/Backend/.env
