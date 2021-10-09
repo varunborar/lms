@@ -1,6 +1,4 @@
-const bcrypt = require('bcrypt');
 const User = require("../models/user.model");
-require('dotenv').config();
 
 // Error handling functions
 

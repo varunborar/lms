@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const { isEmail } = require('validator');
+const bcrypt = require('bcrypt');
 const Schema = mongoose.Schema;
+
+require('dotenv').config();
 
 const UserSchema = new Schema({
 
@@ -25,6 +28,14 @@ const UserSchema = new Schema({
         "minlength": [8, "Minimum password length should be 8 characters"]
     }
 });
+
+// Hashing the password
+
+UserSchema.pre('save', async function(next) {
+    const salt = await bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
+    next();
+})
 
 const User = mongoose.model('user', UserSchema);
 
