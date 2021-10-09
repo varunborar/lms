@@ -1,0 +1,36 @@
+.nav-bar {
+    background-color: var(--background-color-primary);
+}
+
+.nav-bar .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-bar .logo span {
+    color: var(--accent-color-primary);
+}
+
+.nav-bar .navbar .navbar-nav .nav-item {
+    padding: 8px 24px;
+}
+
+.nav-bar .navbar .navbar-nav .nav-item a {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-bar .navbar .navbar-nav .nav-item a.active,
+.nav-bar .navbar .navbar-nav .nav-item a:hover {
+    color: var(--accent-color-primary);
+}
+
+.nav-bar .navbar .navbar-text .btn {
+    margin: 8px 24px 8px 0px;
+}
+
+.nav-bar .navbar .navbar-text .signup {
+    background-color: var(--accent-color-primary);
+    color: var(--text-color-secondary);
+}
