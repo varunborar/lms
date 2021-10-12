@@ -1,0 +1,73 @@
+[{
+        "id": 1,
+        "title": "Introduction to C++",
+        "image": "cpp.png",
+        "tasks": [{
+                "task_id": 1,
+                "title": "Hello World Program",
+                "description": "Watch the following video to learn how to write a simple hello world program in C++",
+                "embed_code": "92KrmWOL2Fo"
+            },
+            {
+                "task_id": 2,
+                "title": "Variable, Constants and Operators",
+                "description": "Watch the following video to learn about basic concepts like variable, constants and operators",
+                "embed_code": "ZKcNK9tzRm4"
+            },
+            {
+                "task_id": 3,
+                "title": "Decision making and looping control",
+                "description": "Watch the following video to learn about loops",
+                "embed_code": "IlIn_D1RT7M"
+            },
+            {
+                "task_id": 4,
+                "title": "Functions",
+                "description": "Watch the following video to learn about functions",
+                "embed_code": "83KtncYgHYQ"
+            },
+            {
+                "task_id": 5,
+                "title": "Classes and objects",
+                "description": "Watch the following video to learn about classes and objects",
+                "embed_code": "6Q0Cff29YwU"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Introduction to python",
+        "image": "python.webp",
+        "tasks": [{
+                "task_id": 1,
+                "title": "Hello World Program",
+                "description": "Watch the following video to learn how to write a simple hello world program in python",
+                "embed_code": "ks6wF_ooYqo"
+            },
+            {
+                "task_id": 2,
+                "title": "Python Strings",
+                "description": "Watch the following video to learn about python strings",
+                "embed_code": "Ctqi5Y4X-jA"
+            },
+            {
+                "task_id": 3,
+                "title": "Data Structures",
+                "description": "Watch the following video to learn about basic data structures in python",
+                "embed_code": "gCCVsvgR2KU"
+            },
+            {
+                "task_id": 4,
+                "title": "Loops",
+                "description": "Watch the following video to learn about loops in python",
+                "embed_code": "0ZvaDa8eT5s"
+            },
+            {
+                "task_id": 5,
+                "title": "Funtions",
+                "description": "Watch the following video to learn about functions in python",
+                "embed_code": "BVfCWuca9nw"
+            }
+        ]
+    }
+]

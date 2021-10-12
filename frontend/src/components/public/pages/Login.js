@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { loginUser } from '../../../State/actions/authActions';
 
 import '../assets/styles/login.css'
 
@@ -31,6 +35,13 @@ class Login extends Component{
             "email": this.state.email,
             "password": this.state.password
         }
+        await this.props.loginUser(loginRequest, this.props.history);   
+    }
+
+    componentDidMount() {
+        if (this.props.auth.isAuthenticated) {
+            this.props.history.push("app");
+        }
     }
 
     render(){
@@ -56,7 +67,7 @@ class Login extends Component{
                             onChange={this.handleStateChange}
                             required
                         />
-                        <div className="error">{this.state.errors['email']}</div>
+                        <div className="error">{this.props.errors['email']}</div>
                     </div>
                     <div className="input-container">
                         <label
@@ -73,7 +84,7 @@ class Login extends Component{
                             onChange={this.handleStateChange}
                             required
                         />
-                        <div className="error">{this.state.errors['password']}</div>
+                        <div className="error">{this.props.errors['password']}</div>
                     </div>         
                     <div className="input-container"> 
                         <button type="submit" className="btn btn-primary">Log In</button>
@@ -84,4 +95,19 @@ class Login extends Component{
         )
     } 
 }
-export default Login;
+
+Login.propType = {
+    loginUser: PropTypes.func.isRequired,
+    errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+    'errors': state.errors,
+    'auth': state.auth
+});
+
+
+export default connect(
+    mapStateToProps,
+    { loginUser }
+)(withRouter(Login));

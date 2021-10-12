@@ -1,6 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
+
 require('dotenv').config();
 
 const app = express();
@@ -9,6 +12,8 @@ const app = express();
 app.use(express.static('build'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cookieParser());
+app.use(cors()); // For handling cors request in development server.
 
 // Database Connection
 const db = process.env.MONGODB_CONNECTION;
@@ -32,9 +37,17 @@ app.listen(PORT, () => {
 })
 
 // Routers
-const authRouter = require('./routes/auth');
-app.use('/api', authRouter);
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + './build' + 'index.html'));
+// Handling options request for cors
+const defaultRouter = express.Router();
+defaultRouter.options('/', cors());
+
+const authRouter = require('./routes/auth');
+app.use('/api/auth', authRouter);
+
+const taskRouter = require('./routes/tasks');
+app.use('/api/task', taskRouter);
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/build/' + 'index.html'));
 });

@@ -1,0 +1,23 @@
+.dashboard-page {
+    padding-top: 2rem;
+    padding-left: 60px;
+}
+
+.dashboard-page .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-page h2 {
+    text-align: center;
+}
+
+.dashboard-page p {
+    margin-top: 0.75rem;
+    text-align: justify;
+}
+
+.dashboard-page p.muted {
+    opacity: 0.7;
+}

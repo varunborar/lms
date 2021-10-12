@@ -26,8 +26,27 @@ const UserSchema = new Schema({
         "type": String,
         "required": [true, "Password is required"],
         "minlength": [8, "Minimum password length should be 8 characters"]
+    },
+    "display-image": {
+        "data": String,
+        "contentType": String
     }
 });
+
+// Static method to login
+
+UserSchema.statics.login = async function(email, password) {
+    const user = await this.findOne({ email });
+
+    if (user) {
+        const auth = await bcrypt.compare(password, user.password);
+        if (auth) {
+            return user;
+        }
+        throw Error('400:Password');
+    }
+    throw Error('404:Email');
+}
 
 // Hashing the password
 

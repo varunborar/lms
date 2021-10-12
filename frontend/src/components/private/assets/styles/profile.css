@@ -1,9 +1,9 @@
-.signup-page {
+.profile-page {
     background: var(--background-color-secondary);
     padding: 80px 0px;
 }
 
-.signup-page .signup-form {
+.profile-page .edit-form {
     max-width: 400px;
     width: 80%;
     margin: 0 auto;
@@ -14,17 +14,17 @@
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
-.signup-page .signup-form h2 {
+.profile-page h2 {
     text-align: center;
     margin-bottom: 3rem;
 }
 
-.signup-page .signup-form .input-container {
+.profile-page .input-container {
     margin: 1rem 0;
     width: 100%;
 }
 
-.signup-page .signup-form .input-container.image-input {
+.profile-page .input-container.image-input {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,22 +37,22 @@
     border-radius: 50%;
 }
 
-.signup-page .signup-form .input-container .input-field {
+.profile-page .input-container .input-field {
     width: 100%;
     padding: 3px 6px;
 }
 
-.signup-page .signup-form .input-container .btn {
+.profile-page .input-container .btn {
     width: 100%;
     margin: 1.25rem 0 0 0;
 }
 
-.signup-page .signup-form .input-container .error {
+.profile-page .input-container .error {
     color: red;
     font-size: 12px;
 }
 
-.signup-page .signup-form .new {
+.profile-page .new {
     display: block;
     text-align: center;
     font-size: 12px;
@@ -61,8 +61,8 @@
     text-decoration: none;
 }
 
-.signup-page .signup-form .new:hover,
-.signup-page .signup-form .new:active {
+.profile-page .new:hover,
+.profile-page .new:active {
     opacity: 1;
     text-decoration: none;
 }

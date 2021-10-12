@@ -1,0 +1,20 @@
+.side-bar {
+    width: 60px;
+    background-color: var(--background-color-primary);
+    position: fixed;
+    left: 0;
+    top: 40%;
+}
+
+.side-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: var(--text-color-primary);
+    font-size: 24px;
+}
+
+.side-bar a:hover {
+    color: var(--accent-color-primary);
+}
