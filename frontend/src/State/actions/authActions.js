@@ -3,10 +3,10 @@ import setAuthToken from '../utils/setAuthToken';
 import jwt_decode from 'jwt-decode';
 
 import { setUserDetails } from "./userActions";
-import { GET_ERRORS, SET_CURRENT_USER} from "./types";
+import { GET_ERRORS, SET_CURRENT_USER } from "./types";
 
-const URL = "http://localhost:5000";
-// const URL = "";
+// const URL = "http://localhost:5000";
+const URL = "";
 
 export const registerUser = (userData, history) =>
     dispatch => {
@@ -29,15 +29,15 @@ export const registerUser = (userData, history) =>
 export const loginUser = (userData, history) =>
     dispatch => {
         axios.post(`${URL}/api/auth/login`, userData)
-            .then(async (res) => {
+            .then(async(res) => {
 
-                const { auth, user, accessToken} = res.data;
+                const { auth, user, accessToken } = res.data;
                 const display_image = res.data['display-image'];
-                const USER = { 
-                    "auth": auth, 
+                const USER = {
+                    "auth": auth,
                     "accessToken": accessToken,
-                    "user": user, 
-                    "display_image": display_image 
+                    "user": user,
+                    "display_image": display_image
                 };
                 localStorage.setItem('USER', JSON.stringify(USER));
                 setAuthToken(accessToken);

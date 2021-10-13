@@ -40,6 +40,7 @@ class Dashboard extends Component {
                                     image={`${process.env.PUBLIC_URL}/assets/img/${course.image}`}
                                     key={course.id}
                                     link_id={course.id}
+                                    history={this.props.history}
                                 />
                             )
                         }

@@ -1,0 +1,38 @@
+.task-page {
+    text-align: center;
+}
+
+.task-page h2 {
+    margin: 2rem 0.5rem;
+}
+
+.task-page p {
+    margin: 0.75rem;
+}
+
+.task-page .video-container {
+    position: relative;
+    margin: 0 10%;
+    padding-bottom: 40%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-page .video-container iframe,
+.task-page .video-container object,
+.task-page .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.task-page #back-btn {
+    margin: 1rem;
+}

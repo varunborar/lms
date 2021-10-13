@@ -1,0 +1,23 @@
+.course-page h2 {
+    text-align: center;
+}
+
+.course-page p {
+    text-align: center;
+}
+
+.course-page .task-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-page #taskContainer {
+    max-width: 420px;
+    width: 100%;
+}
+
+.course-page .accordian-item {
+    max-width: 420px;
+}

@@ -1,0 +1,23 @@
+.course-page {
+    padding-top: 2rem;
+    padding-left: 60px;
+}
+
+.course-page .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-page h2 {
+    text-align: center;
+}
+
+.course-page p {
+    margin-top: 0.75rem;
+    text-align: justify;
+}
+
+.course-page p.muted {
+    opacity: 0.7;
+}

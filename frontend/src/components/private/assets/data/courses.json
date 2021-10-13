@@ -1,6 +1,7 @@
 [{
         "id": 1,
         "title": "Introduction to C++",
+        "description": "Welcome to the course. You can access your tasks from here. Happy hacking!",
         "image": "cpp.png",
         "tasks": [{
                 "task_id": 1,
@@ -37,6 +38,7 @@
     {
         "id": 2,
         "title": "Introduction to python",
+        "description": "Welcome to the course. You can access your tasks from here. Happy hacking!",
         "image": "python.webp",
         "tasks": [{
                 "task_id": 1,

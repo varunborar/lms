@@ -14,7 +14,7 @@ module.exports.addTask = (req, res) => {
     const newTask = new Task({
         "user-id": req.user.user_id,
         "description": req.body.description,
-        "deadline": req.body.deadline,
+        "deadLine": req.body.deadline,
         "isCompleted": req.body.isCompleted
     });
 
@@ -32,7 +32,6 @@ module.exports.deleteTask = (req, res) => {
 module.exports.updateTask = (req, res) => {
     Task.findOneAndUpdate({ _id: req.params.id }, {
         $set: {
-            "user-id": req.user.user_id,
             "description": req.body.description,
             "deadline": req.body.deadline,
             "isCompleted": req.body.isCompleted

@@ -15,8 +15,7 @@ module.exports.updateDetails = async(req, res) => {
     User.findOneAndUpdate({ _id: req.params.id }, {
         $set: {
             "first-name": req.body['first-name'],
-            "last-name": req.body['last-name'],
-            "password": req.body['password']
+            "last-name": req.body['last-name']
         }
     }, { new: true }).then((result) => {
         const approvedRequest = {
