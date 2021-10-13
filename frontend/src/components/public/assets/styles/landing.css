@@ -25,3 +25,10 @@
         padding: 3rem 1rem;
     }
 }
+
+@media screen and (max-width: 772px) {
+    .landing-page .header .text {
+        font-size: 2.25rem;
+        padding: 3rem 1rem;
+    }
+}

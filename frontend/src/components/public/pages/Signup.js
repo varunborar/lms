@@ -69,7 +69,7 @@ class Signup extends Component {
 
     componentDidMount() {
         if (this.props.auth.isAuthenticated) {
-            this.props.history.push("app");
+            this.props.history.push("app/dashboard");
         }
     }
 

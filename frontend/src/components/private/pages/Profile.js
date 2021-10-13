@@ -16,8 +16,7 @@ class Profile extends Component {
         this.state = {
             "firstName": props.user['first-name'],
             "lastName": props.user['last-name'],
-            "email": props.user['email'],
-            "password": ""
+            "email": props.user['email']
         }
         document.title = "Learn AI | Profile";
     }
@@ -33,8 +32,7 @@ class Profile extends Component {
         const updateRequest = {
             "_id": this.props.user['user_id'],
             "first-name": this.state['firstName'],
-            "last-name": this.state['lastName'],
-            "password": this.state.password
+            "last-name": this.state['lastName']
         }
 
         await this.props.updateDetails(updateRequest);
@@ -49,7 +47,7 @@ class Profile extends Component {
                     onSubmit={this.submitHandler}
                 >
                     <div className="input-container image-input">
-                            <img id="dp" src={this.props.auth.user.display_image.data} class="img-fluid" alt=" " />
+                            <img id="dp" src={this.props.auth.user.display_image.data} className="img-fluid" alt=" " />
                         </div>
                         <div className="input-container">
                             <label
@@ -101,23 +99,6 @@ class Profile extends Component {
                                 disabled
                             />
                             <div className="error">{this.props.errors['email']}</div>
-                        </div>
-                        <div className="input-container">
-                            <label
-                                className="label"
-                                for="password"
-                            >
-                                Password
-                            </label>
-                            <input
-                                className="input-field"
-                                type="password"
-                                name="password"
-                                value={this.state.password}
-                                onChange={this.handleStateChange}
-                                required
-                            />
-                            <div className="error">{this.props.errors['password']}</div>
                         </div>
                         <div className="input-container">
                             <button type="submit" className="btn btn-success">Save</button>

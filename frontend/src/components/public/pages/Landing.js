@@ -18,7 +18,9 @@ class Landing extends Component{
                         Education
                         <br/>
                         <span>Uncompromised</span>
-                        <button className="btn btn-primary" onClick={() => {this.props.history.push('signup')}}>Join Us Today</button>
+                        <div className="action-btn d-flex justify-content-end">
+                            <button className="btn btn-primary" onClick={() => {this.props.history.push('signup')}}>Join Us Today</button>
+                        </div>
                     </div>
                 </div>
             </div>

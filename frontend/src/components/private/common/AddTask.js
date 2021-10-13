@@ -39,10 +39,10 @@ class AddTask extends Component {
         return (
             <div className="add-task">
                 <form onSubmit={this.addTask}>
-                    <div class="input-group mb-3">
+                    <div className="input-group mb-3">
                         <input 
                             type="text" 
-                            class="form-control"
+                            className="form-control"
                             name="description" 
                             placeholder="To Do" 
                             onChange={this.onStateChange}
@@ -50,13 +50,13 @@ class AddTask extends Component {
                         />
                         <input
                             type="date"
-                            class="form-control"
+                            className="form-control"
                             name="deadline"
                             onChange={this.onStateChange}
                             placeholder=""
                         />
                         <button 
-                            class="btn btn-outline-secondary" 
+                            className="btn btn-success" 
                             type="submit" 
                             >
                             Add
@@ -72,9 +72,9 @@ AddTask.propTypes = {
     addTask: PropTypes.func.isRequired
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = state => ({
 
-}
+})
 
 export default connect(
     mapStateToProps,

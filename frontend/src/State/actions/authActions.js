@@ -46,7 +46,7 @@ export const loginUser = (userData, history) =>
                 await dispatch(setUserDetails(decoded));
 
                 await dispatch(setCurrentUser(USER));
-                history.push('app');
+                history.push('app/dashboard');
             })
             .catch(err => {
                 console.log(err);

@@ -44,7 +44,7 @@ export const add = (task) => {
 }
 
 export const updateTask = (task) => dispatch => {
-    axios.put(`${URL}/task/update/${task._id}`, task)
+    axios.put(`${URL}/api/task/update/${task._id}`, task)
     .then(res => {
         dispatch(update(task))
     })
